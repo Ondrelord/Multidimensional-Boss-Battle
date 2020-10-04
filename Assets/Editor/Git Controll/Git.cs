@@ -111,7 +111,6 @@ public static class Git
             }
             else
             {
-//                return errors;
                 throw new GitException(exitCode, errors);
             }
         }
