@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7085a009488fe44599c69a7a41fa2a1, type: 3}
+  m_Name: Pool of Yellow Shots
+  m_EditorClassIdentifier: 
+  pooledGO: {fileID: 8549468113561836233, guid: b3e279113c5ec3a4887d8d170100b30f, type: 3}
