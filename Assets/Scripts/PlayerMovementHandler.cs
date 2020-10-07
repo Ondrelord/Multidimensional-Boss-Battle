@@ -18,12 +18,13 @@ public class PlayerMovementHandler : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         float up_down_input = Input.GetAxis("Vertical");
         float left_right_input = Input.GetAxis("Horizontal");
 
-        rb.AddForce(new Vector2(left_right_input, up_down_input) * speed);
+        rb.velocity = new Vector2(left_right_input, up_down_input) * speed * Time.fixedDeltaTime;
+        //rb.AddForce(new Vector2(left_right_input, up_down_input) * speed);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
