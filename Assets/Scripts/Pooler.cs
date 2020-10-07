@@ -29,6 +29,7 @@ public class Pooler : ScriptableObject
             {
                 GO.transform.SetPositionAndRotation(position, rotation);
                 GO.transform.SetParent(parent);
+                GO.SetActive(true);
                 return GO;
             }
         }

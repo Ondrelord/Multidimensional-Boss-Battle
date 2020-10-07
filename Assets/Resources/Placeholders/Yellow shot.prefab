@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 8549468113561836235}
   - component: {fileID: 8549468113561836232}
   - component: {fileID: -8381665559913620848}
-  m_Layer: 0
+  - component: {fileID: 2263240877227961551}
+  - component: {fileID: -3626572782405555974}
+  m_Layer: 8
   m_Name: Yellow shot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,3 +106,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &2263240877227961551
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8549468113561836233}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.004365653, y: 0.0053358227}
+  serializedVersion: 2
+  m_Radius: 0.05350752
+--- !u!114 &-3626572782405555974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8549468113561836233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b6336ae90740e45bb613c46c8c1d77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
