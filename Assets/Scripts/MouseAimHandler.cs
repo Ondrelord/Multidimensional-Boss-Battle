@@ -8,7 +8,10 @@ public class MouseAimHandler : MonoBehaviour
     Vector2 mouseDelta;
     Vector2 mousePrevPosition;
 
-    float maxDistance = 0.15f;
+    [SerializeField]
+    private float maxDistance = 0.15f;
+    [SerializeField]
+    private float mouseSensitivity = 1f;
 
     static Vector2 mouseAimPosition;
 
@@ -22,7 +25,7 @@ public class MouseAimHandler : MonoBehaviour
     void Update()
     {
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mouseDelta = mousePosition - mousePrevPosition;
+        mouseDelta = (mousePosition - mousePrevPosition) * mouseSensitivity;
         mouseAimPosition = Vector2.ClampMagnitude(new Vector2(mouseAimPosition.x + mouseDelta.x, mouseAimPosition.y + mouseDelta.y), maxDistance);
         
         mousePrevPosition = mousePosition;

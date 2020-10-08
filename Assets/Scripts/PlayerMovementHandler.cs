@@ -5,14 +5,16 @@ using UnityEngine;
 public class PlayerMovementHandler : MonoBehaviour
 {
     [Header("Movement")]
-    public float speed;
-    public float dodgeDistance;
+    [SerializeField]
+    private float speed = 50;
+    [SerializeField]
+    private float dodgeDistance = 7;
 
     
     private Rigidbody2D rb;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
@@ -24,7 +26,6 @@ public class PlayerMovementHandler : MonoBehaviour
         float left_right_input = Input.GetAxis("Horizontal");
 
         rb.velocity = new Vector2(left_right_input, up_down_input) * speed * Time.fixedDeltaTime;
-        //rb.AddForce(new Vector2(left_right_input, up_down_input) * speed);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
